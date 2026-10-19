@@ -1,0 +1,182 @@
+
+<html>
+<head>
+    <title>Pesona Kerinci</title>
+
+    <style>
+        /* Mengatur desain seluruh halaman */
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: Arial; background: #f4f1e6; color: #26352b; }
+
+        /* Menu navigasi */
+        .menu { background: white; padding: 18px 5%; display: flex; justify-content: space-between; position: sticky; top: 0; }
+        .menu b { color: #2e6b3e; font-size: 20px; }
+        .menu a { margin-left: 15px; color: #333; text-decoration: none; }
+
+        /* Bagian pembuka dengan gambar Gunung Kerinci */
+        .hero { height: 430px; padding: 50px; display: flex; align-items: end; color: white; background: linear-gradient(#00281966, #002819aa), url("GUNUNG KERINCI.webp") center/cover; }
+        .hero h1 { font-size: 48px; }
+        
+        /* Mengatur isi dan judul bagian */
+        .isi { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
+        section { margin-bottom: 60px; scroll-margin-top: 80px; }
+        h2 { color: #214b30; }
+
+        /* Kartu wisata dan gambar ilustrasi */
+        .wisata { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 20px; }
+        .kartu { background: white; border-radius: 18px; overflow: hidden; box-shadow: 0 5px 20px #0002; }
+        .kartu img { width: 100%; height: 170px; object-fit: cover; }
+        .kartu-utama img { height: 220px; }
+        .teks { padding: 20px; }
+        .teks p { line-height: 1.6; }
+        .angka { color: #2e6b3e; font-weight: bold; }
+
+        /* Tabel statistik penduduk */
+        .statistik { background: white; padding: 20px; border-radius: 18px; overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; }
+        th { background: #2e6b3e; color: white; }
+        th, td { padding: 10px; text-align: center; border-bottom: 1px solid #ddd; }
+        td:first-child { text-align: left; }
+        .total { background: #e4bd45; font-weight: bold; }
+
+        /* Informasi budaya Kenduri Sko */
+        .budaya { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; }
+        .budaya-kiri, .budaya-kanan { padding: 25px; border-radius: 18px; }
+        .budaya-kiri { background: #214b30; color: white; }
+        .budaya-kiri h2 { color: white; }
+        .budaya img { width: 100%; height: 200px; object-fit: cover; border-radius: 12px; }
+        .budaya-kanan { background: white; line-height: 1.8; text-align: justify; }
+
+        /* Penutup halaman */
+        footer { background: #183a26; color: white; text-align: center; padding: 25px; }
+
+        /* Menyesuaikan tampilan di layar kecil */
+        @media (max-width: 800px) {
+            .wisata, .budaya { grid-template-columns: 1fr; }
+            .hero { padding: 25px; }
+            .hero h1 { font-size: 35px; }
+            .menu { flex-wrap: wrap; gap: 12px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU: menuju bagian wisata, statistik, budaya, dan beranda -->
+    <div class="menu">
+        <b>KERINCI</b>
+        <div>
+            <a href="#wisata">WISATA</a>
+            <a href="#statistik">STATISTIK</a>
+            <a href="#budaya">BUDAYA</a>
+            <a href="MAIN JUDUL.html">BERANDA</a>
+        </div>
+    </div>
+
+    <!-- HERO: tampilan pembuka website -->
+    <div class="hero">
+        <div>
+            <b>PESONA KABUPATEN KERINCI</b>
+            <h1>Alam, Data & Budaya</h1>
+            <p>Mengenal alam, penduduk, dan budaya Kerinci.</p>
+        </div>
+    </div>
+
+    <div class="isi">
+
+        <!-- WISATA: menampilkan tiga destinasi -->
+        <section id="wisata">
+            <h2>Jelajah Kerinci</h2>
+
+            <div class="wisata">
+                <div class="kartu kartu-utama">
+                    <img src="GUNUNG KERINCI.webp" alt="Gunung Kerinci">
+                    <div class="teks">
+                        <h3>Gunung Kerinci</h3>
+                        <p>Gunung api tertinggi di Indonesia dan puncak tertinggi di Sumatra.</p>
+                        <div class="angka">IKON UTAMA KERINCI</div>
+                    </div>
+                </div>
+
+                <div class="kartu">
+                    <img src="DANAU GUNUNG TUJUH.jpg" alt="Danau Gunung Tujuh">
+                    <div class="teks">
+                        <h3>Danau Gunung Tujuh</h3>
+                        <p>Destinasi wisata alam di kawasan pegunungan Kerinci.</p>
+                        <div class="angka">WISATA ALAM</div>
+                    </div>
+                </div>
+
+                <div class="kartu">
+                    <img src="TAMAN NASIONAL.jpg" alt="Taman Nasional">
+                    <div class="teks">
+                        <h3>Taman Nasional</h3>
+                        <p>Kawasan hutan, gunung, dan keanekaragaman hayati.</p>
+                        <div class="angka">KAWASAN KONSERVASI</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATISTIK: tabel jumlah dan pertumbuhan penduduk -->
+        <section id="statistik">
+            <h2>Statistik Penduduk</h2>
+            <p>Data penduduk dan laju pertumbuhan menurut kecamatan.</p>
+
+            <div class="statistik">
+                <table>
+                    <tr><th>Kecamatan</th><th>Jumlah Penduduk</th><th>Pertumbuhan (%)</th></tr>
+                    <tr><td>Gunung Raya</td><td>9,11</td><td>3,06</td></tr>
+                    <tr><td>Bukit Kerman</td><td>14,61</td><td>4,06</td></tr>
+                    <tr><td>Batang Merangin</td><td>13,30</td><td>4,27</td></tr>
+                    <tr><td>Keliling Danau</td><td>13,54</td><td>0,34</td></tr>
+                    <tr><td>Danau Kerinci Barat</td><td>12,44</td><td>7,36</td></tr>
+                    <tr><td>Danau Kerinci</td><td>14,31</td><td>2,38</td></tr>
+                    <tr><td>Tanah Cogok</td><td>9,50</td><td>2,58</td></tr>
+                    <tr><td>Sitinjau Laut</td><td>10,49</td><td>-0,21</td></tr>
+                    <tr><td>Air Hangat</td><td>11,07</td><td>-0,33</td></tr>
+                    <tr><td>Air Hangat Timur</td><td>20,89</td><td>1,43</td></tr>
+                    <tr><td>Depati VII</td><td>17,34</td><td>0,57</td></tr>
+                    <tr><td>Air Hangat Barat</td><td>11,11</td><td>3,38</td></tr>
+                    <tr><td>Gunung Kerinci</td><td>13,66</td><td>2,43</td></tr>
+                    <tr><td>Siulak</td><td>24,17</td><td>1,90</td></tr>
+                    <tr><td>Siulak Mukai</td><td>12,16</td><td>-0,52</td></tr>
+                    <tr><td>Kayu Aro</td><td>21,99</td><td>3,79</td></tr>
+                    <tr><td>Gunung Tujuh</td><td>16,63</td><td>3,16</td></tr>
+                    <tr><td>Kayu Aro Barat</td><td>22,65</td><td>2,81</td></tr>
+                    <tr class="total"><td>Kabupaten Kerinci</td><td>268,95</td><td>2,31</td></tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- BUDAYA: foto dan penjelasan tradisi Kenduri Sko -->
+        <section id="budaya">
+            <h2>Budaya Kerinci</h2>
+
+            <div class="budaya">
+                <div class="budaya-kiri">
+                    <img src="KENDURI SKO.jpg" alt="Kenduri Sko">
+                    <h2>Kenduri Sko</h2>
+                    <p>Warisan adat masyarakat Kerinci.</p>
+                </div>
+
+                <div class="budaya-kanan">
+                    <h3>Tradisi dan Identitas Kerinci</h3>
+                    <p>Kenduri Sko merupakan tradisi adat yang berkaitan dengan rasa syukur, pelestarian pusaka, dan kepemimpinan adat.</p>
+                    <p>Kegiatannya dapat meliputi musyawarah, pembersihan benda pusaka, pengukuhan pemangku adat, dan makan bersama.</p>
+                    <p>Tradisi ini menjadi bagian penting dari warisan budaya masyarakat Kerinci.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FOOTER: bagian penutup website -->
+    <footer>
+        <b>PESONA KERINCI</b>
+        <p>Alam • Data • Budaya</p>
+        <p>Sumber data: sesuaikan dengan sumber tugasmu</p>
+    </footer>
+
+</body>
+</html>
